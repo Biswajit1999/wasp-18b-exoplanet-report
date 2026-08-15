@@ -1,10 +1,20 @@
-# WASP-18 b — Real TESS Transit Report
+# WASP-18 b: An Ultra-Hot Jupiter in Water Emission
 
+<!-- TARGET-IDENTITY-START -->
+<p align="center">
+  <img src="assets/artist_concept.webp" alt="Artist's interpretation of WASP-18 b near its host star" width="900">
+</p>
+
+<p align="center"><em>AI-generated artist's interpretation informed by the measured system properties; not a direct image.</em></p>
+
+**Ultra-hot Jupiter · thermal inversion · JWST + TESS**
+
+A massive, intensely irradiated giant on a 0.94-day orbit, combining a TESS transit fit with four reductions of a JWST dayside spectrum shaped by water emission.
+<!-- TARGET-IDENTITY-END -->
 <p align="center">
   <img src="figures/wasp18b_tess_transit.png" alt="Phase-folded real TESS transit light curve of WASP-18 b" width="760">
 </p>
 
-One real public TESS SPOC light curve; one historical NASA Exoplanet Archive ephemeris; one timing-adjusted, limb-darkened transit fit.
 
 **[Open the full report](https://biswajit1999.github.io/wasp-18b-exoplanet-report/)** — the live GitHub Pages version.
 
@@ -21,6 +31,7 @@ pip install -r requirements.txt
 python scripts/analyze_transit.py
 python scripts/analyze_multisector.py
 python scripts/analyze_spectrum.py
+python scripts/analyze_atmospheric_evidence.py
 pytest tests/ -v
 ```
 
@@ -66,6 +77,22 @@ Four independent published NIRISS/SOSS reductions are shown. Each is tested agai
 
 Source: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569) (JWST NIRISS/SOSS). Exact files and checksums are in [`data/SOURCE.md`](data/SOURCE.md); complete numerical results are in [`figures/spectrum_statistics.csv`](figures/spectrum_statistics.csv).
 <!-- SPECTRUM-UPGRADE-END -->
+
+<!-- ATMOSPHERE-EVIDENCE-START -->
+## Atmospheric evidence: detection, limit, or unknown?
+
+<p align="center"><img src="figures/molecular_evidence.png" alt="Source-graded atmospheric evidence for WASP-18 b" width="820"></p>
+
+Four independent reductions in the repository show highly significant spectral structure. The species-level statements come from the published retrieval and opacity-removal tests.
+
+| Species | Status | Evidence | Basis |
+|---|---|---|---|
+| H2O | reported detection | >6 sigma | three water emission features |
+| H- / TiO / VO | reported evidence | 3.8 sigma combined | optical-opacity interpretation |
+| O2 | no evidence | not reported | no molecular-oxygen inference |
+
+Primary source: [Coulombe et al. 2023, Nature](https://doi.org/10.1038/s41586-023-06230-1). The table is also available as [`data/atmospheric_evidence.csv`](data/atmospheric_evidence.csv). Oxygen-bearing species such as H2O, CO2, and SO2 are **not** evidence for molecular oxygen (O2) or a biosignature.
+<!-- ATMOSPHERE-EVIDENCE-END -->
 
 ## System context
 

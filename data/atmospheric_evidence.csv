@@ -1,0 +1,4 @@
+species,status,evidence,basis,source_label,source_url
+H2O,reported detection,>6 sigma,three water emission features,"Coulombe et al. 2023, Nature",https://doi.org/10.1038/s41586-023-06230-1
+H- / TiO / VO,reported evidence,3.8 sigma combined,optical-opacity interpretation,"Coulombe et al. 2023, Nature",https://doi.org/10.1038/s41586-023-06230-1
+O2,no evidence,not reported,no molecular-oxygen inference,"Coulombe et al. 2023, Nature",https://doi.org/10.1038/s41586-023-06230-1
