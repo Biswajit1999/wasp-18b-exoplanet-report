@@ -27,3 +27,21 @@ not make it free of residual stellar or instrumental systematics.
 
 The saved row is the input actually used by `scripts/analyze_transit.py`; the
 analysis does not query a changing live service at run time.
+
+
+## Additional TESS sectors for robustness analysis
+
+All are unmodified standard-cadence SPOC light curves from the same [MAST TESS collection](https://doi.org/10.17909/t9-nmc8-f686).
+
+- Sector 2: `tess2018234235059-s0002-0000000100100827-0121-s_lc.fits` (2,004,480 bytes)
+  - MAST URI: `mast:TESS/product/tess2018234235059-s0002-0000000100100827-0121-s_lc.fits`
+  - SHA-256: `9e83d10406a7ee0274409cd19f39857abbadfbe907e0a1f033d18c00136b0c7b`
+
+## Published planetary spectrum
+
+- Archive record: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569)
+- Data type: emission; instrument: JWST NIRISS/SOSS
+- `data/spectra/nirhiss_w18b_spectrum.txt` — SHA-256 `8759cb499d0a2dea2df6ec79ea22fa7b544b81c4700595aebdf02ad2cff5c9ea`
+- `data/spectra/nameless_w18b_spectrum.txt` — SHA-256 `8ee921d8e714b1267539cae0844c9b10b466dc02ed95d9f2ed56028dd2733653`
+- `data/spectra/transitspectroscopy_w18b_spectrum.txt` — SHA-256 `ed353b9486a60791099d9a8bb2b8bd6ed21065afab6ea8418e14287394671428`
+- `data/spectra/supreme_spoon_w18b_spectrum.txt` — SHA-256 `779287b7d9f6423b3f4c145a8144890cc43317827e675393251f703488d46377`

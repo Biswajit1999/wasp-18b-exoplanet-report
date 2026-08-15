@@ -20,6 +20,8 @@ ephemeris; one reproducible flat-versus-box statistical comparison.
 ```bash
 pip install -r requirements.txt
 python scripts/analyze_transit.py
+python scripts/analyze_multisector.py
+python scripts/analyze_spectrum.py
 pytest tests/ -v
 ```
 
@@ -42,6 +44,30 @@ a two-level box whose depth is fitted. Timing and duration are not searched.
 The fixed-window box improves strongly on a flat light curve for these data. This establishes only how these archived fluxes compare with this
 pre-specified box model. It does not independently confirm the planet or identify
 an atmosphere.
+
+<!-- MULTISECTOR-UPGRADE-START -->
+## Multi-sector robustness and correlated noise
+
+The fixed archive ephemeris was fitted independently in 1 usable sector(s) (S2). Formal depth errors were inflated by sqrt(max(reduced chi-square, 1)) times the residual time-averaging beta factor (observed range 2.56-2.56). The robust inverse-variance depth is 8880.5 +/- 101.3 ppm; a sector-to-sector Q test requires at least two usable sectors. These scaled errors address underestimated scatter and short-timescale correlation, but they are not a full Gaussian-process or physical limb-darkened transit fit.
+
+<p align="center"><img src="figures/wasp18b_multisector_transits.png" alt="Independent sector transit fits for WASP-18 b" width="760"></p>
+
+<p align="center"><img src="figures/wasp18b_depth_consistency.png" alt="Sector depth consistency for WASP-18 b" width="760"></p>
+
+<p align="center"><img src="figures/wasp18b_noise_diagnostics.png" alt="Residual RMS time-averaging diagnostic for WASP-18 b" width="760"></p>
+
+The per-sector table is in [`figures/multisector_statistics.csv`](figures/multisector_statistics.csv). Regenerate all three figures with `python scripts/analyze_multisector.py`.
+<!-- MULTISECTOR-UPGRADE-END -->
+
+<!-- SPECTRUM-UPGRADE-START -->
+## Published planetary spectrum
+
+<p align="center"><img src="figures/wasp18b_published_spectrum.png" alt="Published emission spectrum of WASP-18 b" width="760"></p>
+
+Four independent published NIRISS/SOSS reductions are shown. Each is tested against its own weighted-flat eclipse spectrum, while the comparison plot exposes reduction spread; this is not an atmospheric retrieval.
+
+Source: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569) (JWST NIRISS/SOSS). Exact files and checksums are in [`data/SOURCE.md`](data/SOURCE.md); complete numerical results are in [`figures/spectrum_statistics.csv`](figures/spectrum_statistics.csv).
+<!-- SPECTRUM-UPGRADE-END -->
 
 ## System context
 
