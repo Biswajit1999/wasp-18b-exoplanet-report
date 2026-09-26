@@ -41,6 +41,8 @@ All are unmodified standard-cadence SPOC light curves from the same [MAST TESS c
 
 - Archive record: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569)
 - Data type: emission; instrument: JWST NIRISS/SOSS
+- Observation structure: four pipeline reductions (`NAMELESS`, `nirHiss`, `supreme-SPOON`, and `transitspectroscopy`) of the same eclipse observation, as documented by Coulombe et al. (2023). They are correlated reductions, not four independent eclipses.
+- Text-file SHA-256 values below use canonical LF line endings so integrity checks are reproducible on Windows and Linux. The numerical content is unchanged.
 - `data/spectra/nirhiss_w18b_spectrum.txt` — SHA-256 `8759cb499d0a2dea2df6ec79ea22fa7b544b81c4700595aebdf02ad2cff5c9ea`
 - `data/spectra/nameless_w18b_spectrum.txt` — SHA-256 `8ee921d8e714b1267539cae0844c9b10b466dc02ed95d9f2ed56028dd2733653`
 - `data/spectra/transitspectroscopy_w18b_spectrum.txt` — SHA-256 `ed353b9486a60791099d9a8bb2b8bd6ed21065afab6ea8418e14287394671428`

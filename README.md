@@ -80,7 +80,11 @@ The per-sector table is in [`figures/multisector_statistics.csv`](figures/multis
 
 <p align="center"><img src="figures/wasp18b_published_spectrum.png" alt="Published emission spectrum of WASP-18 b" width="760"></p>
 
-Four independent published NIRISS/SOSS reductions are shown. Each is tested against its own weighted-flat eclipse spectrum, while the comparison plot exposes reduction spread; this is not an atmospheric retrieval.
+These are four correlated reductions of the same NIRISS/SOSS eclipse observation—not four independent observations. Each delivered spectrum rejects its own weighted-flat model (reduced χ² 17.0–22.7), establishing wavelength structure only. That test is not a molecular detection or an atmospheric retrieval.
+
+<p align="center"><img src="figures/wasp18b_pipeline_differences.png" alt="Pairwise differences among four reductions of the same WASP-18 b eclipse" width="760"></p>
+
+All six wavelength-resolved pipeline pairs are compared on their overlap. Median absolute differences span 39.2–112.6 ppm; pairs involving `transitspectroscopy` have the largest median spread (106.7–112.6 ppm). The plotted quadrature-error bands are descriptive independence references: shared photons and common calibration steps mean the pairwise residuals are correlated, so they are not formal consistency probabilities.
 
 Source: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569) (JWST NIRISS/SOSS). Exact files and checksums are in [`data/SOURCE.md`](data/SOURCE.md); complete numerical results are in [`figures/spectrum_statistics.csv`](figures/spectrum_statistics.csv).
 <!-- SPECTRUM-UPGRADE-END -->
@@ -90,7 +94,7 @@ Source: [10.5281/zenodo.7907569](https://zenodo.org/records/7907569) (JWST NIRIS
 
 <p align="center"><img src="figures/molecular_evidence.png" alt="Source-graded atmospheric evidence for WASP-18 b" width="820"></p>
 
-Four independent reductions in the repository show highly significant spectral structure. The species-level statements come from the published retrieval and opacity-removal tests.
+Four correlated reductions of one eclipse show strong wavelength structure. The species-level and thermal-inversion statements below come from the published retrieval and opacity-removal tests, not from this repository's flat-spectrum or pipeline-agreement diagnostics.
 
 | Species | Status | Evidence | Basis |
 |---|---|---|---|
@@ -119,6 +123,9 @@ Primary source: [Coulombe et al. 2023, Nature](https://doi.org/10.1038/s41586-02
 - Midpoint freedom corrects accumulated ephemeris error but introduces a bounded timing search. ΔBIC, not a naïve one-parameter p-value, is used as the support gate.
 - PDCSAP processing, dilution, stellar variability, transit-timing variations, and long-timescale covariance can still bias the inferred geometry.
 - Radius ratio, impact parameter, and fixed limb darkening are correlated. Published global fits with physical priors and simultaneous detrending remain authoritative.
+- The four NIRISS/SOSS spectra reuse one eclipse observation. Pipeline agreement probes reduction sensitivity but does not multiply the observation count or detection significance.
+- Flat-spectrum rejection tests only whether eclipse depth varies with wavelength. Molecular abundances, water significance, temperature inversion, metallicity, and C/O require forward modelling or retrieval and are cited to the publication.
+- Pairwise differences interpolate one reduction onto another grid and use quadrature errors as an independence reference; correlations between reductions are unavailable and no formal agreement p-value is claimed.
 
 ## Repository structure
 
@@ -140,6 +147,7 @@ LICENSE                     MIT
 2. Ricker, G. R. et al. (2015), *Transiting Exoplanet Survey Satellite (TESS)*, JATIS 1, 014003, [doi:10.1117/1.JATIS.1.1.014003](https://doi.org/10.1117/1.JATIS.1.1.014003).
 3. TESS Team, *TESS Light Curves — All Sectors*, MAST, [doi:10.17909/t9-nmc8-f686](https://doi.org/10.17909/t9-nmc8-f686); Sector 2 used here.
 4. [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), `pscomppars` TAP row retrieved 2026-08-15.
+5. Coulombe, L.-P. et al. (2023), *A broadband thermal emission spectrum of the ultra-hot Jupiter WASP-18b*, Nature 620, 292–298, [doi:10.1038/s41586-023-06230-1](https://doi.org/10.1038/s41586-023-06230-1).
 
 ## Author
 
