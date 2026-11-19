@@ -1,0 +1,81 @@
+{
+  "project": "WASP-18 b: An Ultra-Hot Jupiter in Water Emission",
+  "repository": "https://github.com/Biswajit1999/wasp-18b-exoplanet-report",
+  "files": [
+    {
+      "label": "Data source notes",
+      "path": "data/SOURCE.md",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Nameless w18b spectrum",
+      "path": "data/spectra/nameless_w18b_spectrum.txt",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Nirhiss w18b spectrum",
+      "path": "data/spectra/nirhiss_w18b_spectrum.txt",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Supreme spoon w18b spectrum",
+      "path": "data/spectra/supreme_spoon_w18b_spectrum.txt",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Transitspectroscopy w18b spectrum",
+      "path": "data/spectra/transitspectroscopy_w18b_spectrum.txt",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Atmospheric evidence",
+      "path": "data/atmospheric_evidence.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "System parameters",
+      "path": "data/system_parameters.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Summary statistics",
+      "path": "figures/summary_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Spectrum statistics",
+      "path": "figures/spectrum_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Multisector statistics",
+      "path": "figures/multisector_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Pipeline agreement",
+      "path": "figures/pipeline_agreement.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Wasp18b published spectrum",
+      "path": "figures/wasp18b_published_spectrum.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Molecular evidence",
+      "path": "figures/molecular_evidence.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Wasp18b depth consistency",
+      "path": "figures/wasp18b_depth_consistency.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Wasp18b multisector transits",
+      "path": "figures/wasp18b_multisector_transits.png",
+      "role": "Figures"
+    }
+  ]
+}
